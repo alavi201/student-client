@@ -27,9 +27,11 @@ export class StudentService {
   }
 
   getStudent(id: number): Observable<Student> {
-    // TODO: send the message _after_ fetching the student
-    this.messageService.add(`StudentService: fetched student id=${id}`);
-    return of(STUDENTS.find(student => student.id === id));
+    const url = `${this.apiurl}?id=${id}`;
+    return this.http.get<Student>(url).pipe(
+      tap(_ => this.log(`fetched student id=${id}`)),
+      catchError(this.handleError<Student>(`getStudent id=${id}`))
+    );
   }
 
   /**
