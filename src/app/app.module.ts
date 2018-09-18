@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 import {enableProdMode} from '@angular/core';
+import { StudentSearchComponent } from './student-search/student-search.component';
 
 enableProdMode();
 
@@ -18,7 +19,8 @@ enableProdMode();
     StudentsComponent,
     MessagesComponent,
     StudentDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    StudentSearchComponent
   ],
   imports: [
     BrowserModule,

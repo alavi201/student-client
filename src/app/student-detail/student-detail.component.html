@@ -1,11 +1,11 @@
 <div *ngIf="student">
  
-  <h2>{{student.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{student.id}}</div>
-  <div>
-    <label>fname:
-      <input [(ngModel)]="student.fname" placeholder="fname">
-    </label>
-  </div>
+  <h2>{{student.fname | uppercase}} Details</h2>
+  <div><span>fname: </span>{{student.fname}}</div>
+  <div><span>lname: </span>{{student.lname}}</div>
+  <div><span>email: </span>{{student.email}}</div>
+  <div><span>address: </span>{{student.address}}</div>
+  <div><span>gpa: </span>{{student.gpa}}</div>
+  <br>
   <button (click)="goBack()">go back</button>
 </div>

@@ -1,4 +1,34 @@
 <h2>My students</h2>
+<div>
+  <label>Student fname:
+    <input #studentFname />
+  </label>
+  <label>Student lname:
+    <input #studentLname />
+  </label>
+  <br>
+  <label>Student email:
+    <input #studentEmail />
+  </label>
+  <label>Student address:
+    <textarea #studentAddress></textarea>
+  </label>
+  <br>
+  <label>Student gpa:
+    <input #studentGpa />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(
+    studentFname.value,
+    studentLname.value,
+    studentEmail.value,
+    studentAddress.value,
+    studentGpa.value
+    ); 
+      studentName.value=''">
+    Add Student
+  </button>
+</div>
 <ul class="students">
   <li *ngFor="let student of students">
     <a routerLink="/detail/{{student.id}}">

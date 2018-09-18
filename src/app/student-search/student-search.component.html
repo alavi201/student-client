@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>Student Search</h4>
+ 
+  By fname, lname or id<input #searchBoxFname id="search-box" (keyup)="search(searchBoxFname.value)" />
+ 
+  <ul class="search-result">
+    <li *ngFor="let student of students$ | async" >
+      <a routerLink="/detail/{{student.id}}">
+        ID:{{student.id}} F Name: {{student.fname}} L Name: {{student.lname}}
+      </a>
+    </li>
+  </ul>
+</div>

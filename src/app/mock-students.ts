@@ -1,6 +1,6 @@
 import { Student } from './student';
 
-export const STUDENTS: Student[] = [
+/*export const STUDENTS: Student[] = [
   { id: 11, fname: 'Mr. Nice' },
   { id: 12, fname: 'Narco' },
   { id: 13, fname: 'Bombasto' },
@@ -11,4 +11,4 @@ export const STUDENTS: Student[] = [
   { id: 18, fname: 'Dr IQ' },
   { id: 19, fname: 'Magma' },
   { id: 20, fname: 'Tornado' }
-];
+];*/
